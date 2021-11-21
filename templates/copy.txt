@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<!-- 홈페이지 제목 -->
+    {% if title %}         //jinja2표현식을 사용해 만약 title값이 존재한다면 하위 코드 실행
+    <title>{{ title }}</title>   //상위 조건문이 참이라면 해당 title변수의 값을 제목으로 출력
+    {% else %}             //만약 존재하지 않는다면(상위 조건문에 해당하지 않은 경우)
+    <title>Default Title</title>   //default title을 출력함
+    {% endif %}           //제어문 종료
+</head>
+<body>
+<!-- 해당 부분에 html 코드 작성 -->
+<h1>{{ title }} 테이블 데이터</h1>             //jinja2 표현식을 사용해 title변수의 값을 출력
+<ul>
+    {% for data in data_list %}         //반복문 변수 data를 data_list의 끝까지 반복함  {% ~ % 는 jinja2 반복문 표현식}
+    <li>{{ data }}</li>                 //li태그를 이용해 data값 출력
+    {% endfor %}                       //반복문 종료
+</ul>
+</body>
+</html>

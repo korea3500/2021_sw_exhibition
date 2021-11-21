@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- 홈페이지 제목 -->
+    {% if title %}    //jinja2 표현식을 이용해 만약 title값이 존재한다면(참이라면) 하위 코드 실행
+    <title>{{ title }}</title>  //상위 조건문에서 참이였다면 title변수의 값을 html title로 활용해서 출력
+    {% else %}        //만약 존재하지 않는다면(상위 조건문에 False였다면)
+    <title>Default Title</title>   //default title 문구를 title로 출력
+    {% endif %}        //제어문 종료(jinja2 표현식)
+</head>
+<body>
+    <!-- 해당 부분에 html 코드 작성 -->
+    <h1>데이터베이스 실습</h1>
+    <ul>
+    <li><a href="/student">student 테이블</a></li>            //a태그에 현재 위치의 student파일을 하이퍼링크
+    <li><a href="/instructor">instructor 테이블</a></li>      //a태그를 이용해서 현재 위치의 instructor파일을 하이퍼링크함
+    </ul>
+</body>
+</html>

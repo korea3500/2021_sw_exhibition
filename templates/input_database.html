@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MOCA instance input</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script type = "text/javascript" src = "/static/js/cognitive.js?ver0652"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <link href="/static/css/styles.css?ver0001" rel="stylesheet" />
+
+    
+
+
+
+</head>
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">\
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+
+        <a class="navbar-brand ps-3" href="/">Information Table Input</a>
+        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <!-- <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+            </div> -->
+        </form>
+        
+        <!-- <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#!">Settings</a></li>
+                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li><a class="dropdown-item" href="/logout.html">Logout</a></li>
+                </ul>
+            </li>
+        </ul> -->
+    </nav>    
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <!-- <div class="sb-sidenav-menu-heading">Core</div>
+                        <a class="nav-link" href="index.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Dashboard
+                        </a> -->
+                        <div class="sb-sidenav-menu-heading">I/O</div>
+                    
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                            DATABASE
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="output_database.html">DATABASE OUTPUT</a>
+                                <a class="nav-link" href="regression.html">Regression</a>
+
+                                <!-- <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a> -->
+                            </nav>
+                        </div>
+
+                        <div class="sb-sidenav-menu-heading">Status</div>
+                        
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            Authentication
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link" href="/logout.html">Logout</a>
+                                    <!-- <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div> -->
+                                
+
+                                <!-- <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                    Error
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="401.html">401 Page</a>
+                                        <a class="nav-link" href="404.html">404 Page</a>
+                                        <a class="nav-link" href="500.html">500 Page</a>
+                                    </nav> 
+                                </div> -->
+                            </nav>
+                        </div>
+                        <!-- <div class="sb-sidenav-menu-heading">Addons</div>
+                        <a class="nav-link" href="charts.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            Charts
+                        </a>
+                        <a class="nav-link" href="tables.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            Tables
+                        </a> -->
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer">
+                    <div class="small">Current ID:</div>
+                    {{ username }}
+                </div>
+            </nav> 
+        </div>
+    
+    
+
+    <div class = "container">
+        <br>
+        </br>
+        <br>
+        <ol class="breadcrumb mb-4">
+            <!-- <li class="breadcrumb-item"><a href="/output_database.html">Databse Output</a></li> -->
+        </ol>
+
+        
+        <div class="form_method">
+            {{form.csrf_token}}
+
+            <form method="POST" onsubmit="return confirm_database();">
+                <!-- <div class="form-group">
+                    <label for="name">이름</label>
+                    <input type="text" class="form-control" id="name" placeholder="이름" name="name"/>
+                </div> -->
+                <div class="form-group">
+                    <label for="patient_no">환자번호</label>
+                    <input type="text" class="form-control" id="patient_no" placeholder="ex) 5600" name="patient_no"/>
+                </div>
+                <div class="form-group">
+                    <label for="patient_no">나이(만)</label>
+                    <input type="text" class="form-control" id="age" placeholder="22" name="age"/>
+                </div>
+                    <!-- <input type="text" class="form-control" id="age" placeholder="ex) 24살인 경우 24만 입력" name="age"/> -->
+                </div>
+                <div class="form-group">
+                    
+                    <label for="education">교육 수준</label>
+                    <br>
+                    
+                    <!-- <input type="text" class="form-control" id="education" placeholder="ex) 8" name="education"/> -->
+                    
+                    <label class = "btn btn-primary">
+                        <input type="radio" id="education_radio_0" name = "education_radio" value="-1"/>비문해자
+                    </label>
+                    <label class = "btn btn-primary">
+                        <input type="radio" id="education_radio_1" name = "education_radio" value="0"/>무학
+                    </label> 
+                    <label class = "btn btn-primary">
+                        <input type="radio" id="education_radio_2" name = "education_radio" value="999"/>직접 입력
+                    </label>
+                    <input type="hidden" id = "education_hidden" name = "education_hidden" value = ""/>
+                    <input type="text" class="form-control" id="education_text" name = "education_text" placeholder="ex) 15"/>
+
+                </div>
+                <div class="form-group">
+                    <label for="sex">성별</label>
+                    <br>
+                    <label class = "btn btn-primary">
+                        <input type="radio" id="sex_radio_0" name = "sex_radio" value="여자">여자
+                    </label>
+                    <label class = "btn btn-primary">
+                        <input type="radio" id="sex_radio_1" name = "sex_radio" value="남자">남자
+                    </label>
+                </div>
+                <div class="form-group">
+                    
+                    <label for="handedness">handedness</label> 
+                    <br>
+                    <label class = "btn btn-primary">
+                        <input type="radio" id="hand_radio_1" name = "hand_radio" value="오른손잡이">오른손잡이
+                    </label>
+                    <label class = "btn btn-primary">
+                        <input type="radio" id="hand_radio_0" name = "hand_radio" value="왼손잡이">왼손잡이
+                    </label>
+                    
+                </div>
+                <div class="form-group">
+                    <!-- 피드백 필요 -->
+                    <label for="cognitive_category">환자 또는 가족이 평소에 인지저하를 호소합니까?</label> 
+                    <br>
+                    <label class = "btn btn-primary">
+                        <input type="radio" id="category_radio_0" name = "category_radio" value="인지장애 호소">인지장애 호소
+                    </label>
+                    <label class = "btn btn-primary">
+                        <input type="radio" id="category_radio_1" name = "category_radio" value="정상">정상
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="score">점수</label>
+                    <br>
+                    <input type="text" class="score" id="score" placeholder="ex) 30점인 경우 30" name="score"/>
+
+                </div>
+                <div class = "form-group">
+                    <input type = "hidden" id = "label" name = "label" value = "">
+                </div>
+
+                <!-- <div class="form-group">
+                    <label for="label">정상 여부(0 : 정상 or 1 : 비정상)</label>
+                    <input type="text" class="form-control" id="label" placeholder="ex) 0" name="label"/>
+                </div> -->
+                <br></br>
+                <button type="submit" class="btn btn-primary">등록</button>
+            </form>
+        </div>
+    <input type = "hidden" name = "hidden_text", id = "waring" value = "{{ waring_message }}">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="/static/js/jquery-3.6.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="/static/js/scripts.js?ver0008"></script>
+    <script src= "/static/js/waring.js?ver0003"></script>
+</body>
+</html>
